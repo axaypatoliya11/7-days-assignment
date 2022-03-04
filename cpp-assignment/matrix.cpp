@@ -4,8 +4,8 @@ using namespace std;
 
 class Matrix{
     int row, column, elems;
-    public:
     int array[10][10];
+    public:
         void getRows(){
             cout<<"number of rows: "<<row<<endl;
         }
@@ -18,7 +18,16 @@ class Matrix{
             array[i][j] = value;
         }
 
-        Matrix addMatrix( Matrix b){
+        void display(){
+            for (int i = 0; i < 3; i++){
+                for (int j = 0; j < 3; j++){
+                    cout<<array[i][j]<<" "<<endl;
+                }
+                cout<<endl;
+            }
+        }
+
+        Matrix addMatrix(Matrix b){
             Matrix temp;
             temp.array[row][column];
             for (int i = 0; i < row; i++){
@@ -69,12 +78,7 @@ int main(){
 
     mat5 = mat2.mulMatrix(mat3);
 
-    for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 3; j++){
-            cout<<mat5.array[i][j]<<endl;
-        }
-        
-    }
+    mat4.display();
     
 
     return 0;
